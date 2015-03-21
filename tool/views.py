@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from .models import Item
-from .pub_med import search_pub_med
 
 def item_list(request):
 	if request.method == 'POST':
