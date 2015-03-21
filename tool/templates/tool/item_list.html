@@ -15,9 +15,15 @@
 		</div>
 
 		<div>
+			<textarea rows="25" cols="100" type="text" id="note"></textarea>
+		</div>
+
+		<div>
 			<table id="id_list_table">
-				{% for item in items %}
-				<tr><td>{{ item.query }}</td></tr>
+				<tr><td><b>{{ last_item }}</b></tr></td>
+				{% for paper in papers %}
+				<tr><td><b>{{ paper.title }}</b></td></tr>
+				<tr><td>{{ paper.abstract }}</td></tr>
 				{% endfor %}
 			</table>
 		</div>
