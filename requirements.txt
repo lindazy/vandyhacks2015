@@ -4,6 +4,9 @@ dj-database-url==0.3.0
 Django==1.7.7
 gunicorn==19.3.0
 numpy==1.9.2
+requests==2.6.0
+scikit-learn==0.15.2
+scipy==0.15.1
 selenium==2.45.0
 whitenoise==1.0.6
 psycopg2==2.5.4
