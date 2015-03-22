@@ -1,14 +1,29 @@
+<!DOCTYPE html>
 {% load staticfiles %}
 <html>
 	<head>
-		<title>Healthcare Tool</title>
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="{% static 'css/tool.css' %}">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>HealthLit Tool</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/logo-nav.css" rel="stylesheet">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueiry/1.11.2/jquery.min.js">
                 </script>
 	</head>
 	<body>
+		<div>
+			<a>
+				<img src="http://www.wistrans.org/cfire/documents/vanderbilt_logo.jpg" alt="">
+			</a>
+		</div>
+		<div>
+			<h1>HealthLit Tool</h1>
+			<p>Enter medical terms of interest to get a list of relevant literature.</p>
+		</div>
 		<div>
 			<form method="POST">
 				<input name="item_query" id="id_new_item" placeholder="Enter query."/>
@@ -26,5 +41,8 @@
 				{% endfor %}
 			</table>
 		</div>
+
+		<script src="css/jquery.js"></script>
+		<script src="css/bootstrap.min.js"></script>
 	</body>
 </html>
