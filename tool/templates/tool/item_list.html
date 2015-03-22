@@ -5,9 +5,8 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="{% static 'css/tool.css' %}">
-		<script>
-
-		</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+                </script>
 	</head>
 	<body>
 		<div>
@@ -16,17 +15,14 @@
 				{% csrf_token %}
 			</form>
 		</div>
-
-		<div>
-			<textarea rows="25" cols="100" type="text" id="note"></textarea>
-		</div>
-
 		<div>
 			<table id="id_list_table">
 				<tr><td><b>{{ last_item }}</b></tr></td>
-				{% for paper in papers %}
-				<tr><td><b>{{ paper.title }}</b></td></tr>
-				<tr><td>{{ paper.abstract }}</td></tr>
+				{% for papers in clusters %}
+					{% for paper in papers %}
+						<tr><td><b>Cluster {{ paper.0 }}: {{paper.1.title }}</b></td></tr>
+						<tr><td>{{ paper.1.abstract }}</td></tr>
+					{% endfor %}
 				{% endfor %}
 			</table>
 		</div>
